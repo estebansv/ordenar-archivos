@@ -23,7 +23,7 @@ jobs:
           python-version: '3.11'
  
       - name: Run Script
-        run: python .ordenar-archivos/ordenar_archivos.py
+        run: python ordenar_archivos.py
 
       - name: commit  and push Changes auto
         uses: stefanzweifel/git-auto-commit-action@v5
