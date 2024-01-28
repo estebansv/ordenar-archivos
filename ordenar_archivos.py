@@ -2,12 +2,14 @@ import os
 
 def main():
     # Obtiene la carpeta de origen
-    origen = /User/iam/Download
+    origen = "/User/iam/Download" or "/home/usuario/"
     #input("Ingrese la carpeta de origen: ")
 
     # Obtiene las extensiones de archivo a mover
-    extensiones = mp3 mp4 jpg png txt pdf apk pkg docx xlsx html csv svg flv py js zip rar gz deb sh bat log
+    #extensiones = mp3 mp4 jpg png txt pdf apk pkg docx xlsx html csv svg flv py js zip rar gz deb sh bat log
     #input("Ingrese las extensiones de archivo a mover, separadas por comas: ")
+    extensiones = ["txt", "jpg", "png", "py", "c", "cpp", "java", "js", "html", "css", "mp3", "mp4",
+                   "avi", "mov", "mpg", "wmv", "flv", "doc", "zip", "rar", "bat", "sh", "deb", "pdf", "docx", "xls", "xlsx", "ppt", "pptx", "apk"]
     extensiones = extensiones.split(",")
 
     # Recorre los archivos de la carpeta de origen
