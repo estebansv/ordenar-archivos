@@ -10,7 +10,7 @@ def main():
     #input("Ingrese las extensiones de archivo a mover, separadas por comas: ")
     extensiones = ["txt", "jpg", "png", "py", "c", "cpp", "java", "js", "html", "css", "mp3", "mp4",
                    "avi", "mov", "mpg", "wmv", "flv", "doc", "zip", "rar", "bat", "sh", "deb", "pdf", "docx", "xls", "xlsx", "ppt", "pptx", "apk"]
-    extensiones = extensiones.split(",")
+  #  extensiones = extensiones.split(",")
 
     # Recorre los archivos de la carpeta de origen
     for archivo in os.listdir(origen):
