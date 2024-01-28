@@ -1,17 +1,35 @@
 name: Ordenar archivos
 
 on:
-  schedule:
-    # Run at 12 AM UTC every day
-    cron: "00 00 * * *"
+  push:
+    branches:
+      -main
 
 jobs:
-  ordenar-archivos:
+  build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Execute Python script
-        run: python ordenar_archivos.py
 
-    
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+      
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+ 
+      - name: Run Script
+        run: python .ordenar_archivos.py
+
+      - name: commit  and push Changes auto
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update Ordenar_archivos
+          commit_user_name: Esteban Sanchez
+          commit_user_emai: ing.inocencio@hotmail.com
+          commit_author: I.Estebansv
